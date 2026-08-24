@@ -10,7 +10,7 @@ export default function App() {
         <nav className="main-nav" aria-label="Main navigation"><NavLink to="/" end>People</NavLink><NavLink to="/create">Add staff</NavLink></nav>
         <div className="account-chip"><span className="online-dot" /> Admin desk</div>
       </header>
-      <Routes><Route path="/" element={<HomePage />} /><Route path="/create" element={<CreatePage />} /></Routes>
+      <Routes><Route path="/" element={<HomePage />} /><Route path="/create" element={<CreatePage />} /><Route path="/edit/:id" element={<CreatePage />} /></Routes>
     </div>
   </BrowserRouter>
 }
