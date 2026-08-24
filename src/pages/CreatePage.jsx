@@ -10,7 +10,7 @@ export default function CreatePage() {
   async function createStaff(event) {
     event.preventDefault(); setError(''); setSaving(true)
     try {
-      const response = await fetch('http://testaug.onrender.com/api/staff', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(form) })
+      const response = await fetch('https://testaug.onrender.com/api/staff', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(form) })
       if (!response.ok) throw new Error('The staff profile could not be created.')
       navigate('/')
     } catch (saveError) { console.error(saveError); setError(saveError.message) } finally { setSaving(false) }
